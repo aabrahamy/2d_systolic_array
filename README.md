@@ -5,7 +5,7 @@
 
 The array is an N×N grid of processing elements (PEs), each with a multiply-accumulate (MAC) unit. Each PE is responsible for exactly one output element. Operands flow through the grid (A moves right, B moves down) and each partial sum stays in place, which is what "output-stationary" means. The design is parametrized by N, so matrices of different sizes can be supported without rewriting the grid.
 
-![Top-level diagram](docs/systolic_array_top.png)
+<img src="docs/systolic_array_top.png" alt="Top-level diagram" width="350">
 
 ### Skew logic
 
@@ -13,4 +13,4 @@ PE(i,j) needs A[i][k] and B[k][j] to arrive on the same cycle, but the two value
 
 Since the array doesn't need the whole matrix up front, I decided to use a shift-register delay approach inistead of pre-built matrices.
 
-![Skew chains and PE grid](docs/PE_grid_skew_chain.png)
+<img src="docs/PE_grid_skew_chain.png" alt="Skew chains and PE grid" width="500">
