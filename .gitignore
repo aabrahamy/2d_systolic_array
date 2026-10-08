@@ -1,0 +1,10 @@
+obj_dir/
+*.vcd
+*.fst
+*.fst.hier
+*.vcd.hier
+coverage.dat
+*.dat.info
+logs/
+*.log
+*.tmp
